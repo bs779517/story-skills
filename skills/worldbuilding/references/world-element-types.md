@@ -66,3 +66,12 @@ Key questions to address:
 - What are the gender roles and family structures?
 - What cultural values dominate?
 - What social tensions exist?
+
+## Education System
+
+Key questions to address:
+- How is knowledge transmitted? (apprenticeship, schools, oral tradition, magical)
+- Who has access to education? (everyone, elite, specific guilds/orders)
+- What institutions exist? (academies, temples, guilds, military schools)
+- How does education intersect with social class?
+- What knowledge is forbidden or restricted?

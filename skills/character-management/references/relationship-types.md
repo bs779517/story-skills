@@ -58,4 +58,4 @@ Inverse pairs:
 - employer <-> subordinate
 
 Symmetric types (same both ways):
-- sibling, spouse, partner, friend, ally, rival, enemy, cousin, colleague, foil
+- sibling, spouse, partner, friend, ally, rival, enemy, cousin, colleague, foil, confidant, love-interest
