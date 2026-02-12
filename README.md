@@ -1,12 +1,35 @@
-# Story Skills
+<div align="center">
 
-A suite of [Agent Skills](https://agentskills.io) for end-to-end story writing powered by markdown. Manage characters, build worlds, structure plots, and write chapters — all as structured markdown files with YAML frontmatter.
+# ✨ Story Skills
 
-Works with Claude Code, GitHub Copilot, Cursor, Windsurf, Gemini CLI, OpenAI Codex, OpenCode, and any agent that supports the `SKILL.md` standard.
+**End-to-end story writing powered by markdown and AI agents.**
 
-## Installation
+Manage characters, build worlds, structure plots, and write chapters — all as structured markdown files with YAML frontmatter.
 
-### Claude Code
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
+[![Agent Skills](https://img.shields.io/badge/Agent_Skills-SKILL.md-blue)](https://agentskills.io)
+[![Claude Code](https://img.shields.io/badge/Claude_Code-plugin-blueviolet)](https://docs.anthropic.com/en/docs/claude-code)
+
+</div>
+
+---
+
+> Works with **Claude Code**, **GitHub Copilot**, **Cursor**, **Windsurf**, **Gemini CLI**, **OpenAI Codex**, **OpenCode**, and any agent that supports the `SKILL.md` standard.
+
+## 🚀 Quick Start
+
+```shell
+# Claude Code — install in two commands
+/plugin marketplace add danjdewhurst/story-skills
+/plugin install story-skills@story-skills
+```
+
+Then just say **"Start a new story"** and the agent takes it from there.
+
+## 📦 Installation
+
+<details>
+<summary><strong>Claude Code</strong></summary>
 
 ```shell
 # Add the marketplace
@@ -16,26 +39,64 @@ Works with Claude Code, GitHub Copilot, Cursor, Windsurf, Gemini CLI, OpenAI Cod
 /plugin install story-skills@story-skills
 ```
 
-### OpenCode
+</details>
 
-The skills use the same `SKILL.md` format that [OpenCode](https://opencode.ai) supports natively. Copy the skill folders into your skills directory:
+<details>
+<summary><strong>GitHub Copilot (VS Code)</strong></summary>
+
+[VS Code with Copilot](https://code.visualstudio.com/docs/copilot/customization/agent-skills) discovers skills from multiple directories:
 
 ```shell
-# Clone the repo
+git clone https://github.com/danjdewhurst/story-skills.git
+
+# Copy skills to your project (any of these work)
+cp -r story-skills/skills/* .github/skills/
+cp -r story-skills/skills/* .agents/skills/
+
+# Or install globally
+cp -r story-skills/skills/* ~/.copilot/skills/
+```
+
+Skills auto-activate when your request matches a skill's description or can be invoked manually.
+
+</details>
+
+<details>
+<summary><strong>Cursor</strong></summary>
+
+[Cursor](https://www.cursor.com) supports the `SKILL.md` standard:
+
+```shell
+git clone https://github.com/danjdewhurst/story-skills.git
+
+cp -r story-skills/skills/* .agents/skills/
+```
+
+</details>
+
+<details>
+<summary><strong>Windsurf</strong></summary>
+
+[Windsurf](https://windsurf.com) discovers skills from workspace and global directories:
+
+```shell
 git clone https://github.com/danjdewhurst/story-skills.git
 
 # Copy skills to your project
-cp -r story-skills/skills/* .opencode/skills/
+cp -r story-skills/skills/* .windsurf/skills/
 
 # Or install globally
-cp -r story-skills/skills/* ~/.config/opencode/skills/
+cp -r story-skills/skills/* ~/.codeium/windsurf/skills/
 ```
 
-OpenCode also searches `.claude/skills/` paths, so project-level Claude skills are automatically discovered.
+Cascade auto-invokes skills when your request matches a skill's description, or use `@skill-name` to invoke manually.
 
-### Gemini CLI
+</details>
 
-[Gemini CLI](https://github.com/google-gemini/gemini-cli) supports the same `SKILL.md` format via the [Agent Skills](https://agentskills.io) standard. Install directly from the repo:
+<details>
+<summary><strong>Gemini CLI</strong></summary>
+
+[Gemini CLI](https://github.com/google-gemini/gemini-cli) supports the same `SKILL.md` format via the [Agent Skills](https://agentskills.io) standard:
 
 ```shell
 # Install all skills globally
@@ -55,12 +116,14 @@ gemini skills link story-skills/skills
 
 Gemini will auto-discover the skills and activate them when your request matches a skill's description.
 
-### Codex (OpenAI)
+</details>
 
-[Codex](https://github.com/openai/codex) uses the same `SKILL.md` format via the [Agent Skills](https://agentskills.io) standard. Copy the skill folders to any of Codex's discovery locations:
+<details>
+<summary><strong>Codex (OpenAI)</strong></summary>
+
+[Codex](https://github.com/openai/codex) uses the same `SKILL.md` format via the [Agent Skills](https://agentskills.io) standard:
 
 ```shell
-# Clone the repo
 git clone https://github.com/danjdewhurst/story-skills.git
 
 # Install to your user skills (available across all projects)
@@ -70,118 +133,31 @@ cp -r story-skills/skills/* ~/.agents/skills/
 cp -r story-skills/skills/* .agents/skills/
 ```
 
-You can also use the built-in installer or symlink the skills directory. Codex detects new skills automatically.
+Codex detects new skills automatically.
 
-### GitHub Copilot (VS Code)
+</details>
 
-[VS Code with Copilot](https://code.visualstudio.com/docs/copilot/customization/agent-skills) discovers skills from multiple directories:
+<details>
+<summary><strong>OpenCode</strong></summary>
 
-```shell
-# Clone the repo
-git clone https://github.com/danjdewhurst/story-skills.git
-
-# Copy skills to your project (any of these work)
-cp -r story-skills/skills/* .github/skills/
-cp -r story-skills/skills/* .agents/skills/
-
-# Or install globally
-cp -r story-skills/skills/* ~/.copilot/skills/
-```
-
-Skills auto-activate when your request matches a skill's description or can be invoked manually.
-
-### Cursor
-
-[Cursor](https://www.cursor.com) supports the `SKILL.md` standard:
+The skills use the same `SKILL.md` format that [OpenCode](https://opencode.ai) supports natively:
 
 ```shell
-# Clone the repo
 git clone https://github.com/danjdewhurst/story-skills.git
 
 # Copy skills to your project
-cp -r story-skills/skills/* .agents/skills/
-```
-
-### Windsurf
-
-[Windsurf](https://windsurf.com) discovers skills from workspace and global directories:
-
-```shell
-# Clone the repo
-git clone https://github.com/danjdewhurst/story-skills.git
-
-# Copy skills to your project
-cp -r story-skills/skills/* .windsurf/skills/
+cp -r story-skills/skills/* .opencode/skills/
 
 # Or install globally
-cp -r story-skills/skills/* ~/.codeium/windsurf/skills/
+cp -r story-skills/skills/* ~/.config/opencode/skills/
 ```
 
-Cascade auto-invokes skills when your request matches a skill's description, or use `@skill-name` to invoke manually.
+OpenCode also searches `.claude/skills/` paths, so project-level Claude skills are automatically discovered.
 
-## Skills
+</details>
 
-### story-init
-
-Scaffolds a new story project with a complete folder structure:
-
-```
-my-story/
-├── story.md              # Story bible (title, genre, themes, POV, tense)
-├── characters/
-│   └── _index.md         # Character registry
-├── worldbuilding/
-│   ├── _index.md         # World overview
-│   ├── locations/
-│   └── systems/
-├── plot/
-│   ├── _index.md         # Arc overview
-│   ├── arcs/
-│   └── timeline.md
-└── chapters/
-    └── _index.md         # Chapter registry
-```
-
-**Try:** "Start a new story" or "Create a story project"
-
-### character-management
-
-Create rich character profiles with structured frontmatter for relationships, traits, and arcs. Manages family trees, bidirectional relationships, and character timelines.
-
-**Try:** "Create a character" or "Build a family tree"
-
-### worldbuilding
-
-Build locations and world systems (magic, politics, technology, religion, economy, military, social, education). Each element gets its own file with cross-references to characters and other world elements.
-
-**Try:** "Create a location" or "Design a magic system"
-
-### plot-structure
-
-Plan story arcs using established structures (three-act, hero's journey, save the cat, kishotenketsu). Track plot points, timelines, and foreshadowing across arcs and chapters.
-
-**Try:** "Create a plot arc" or "Set up the story structure"
-
-### chapter-writing
-
-Write chapters using an outline-first workflow. Gathers context from all other story files to maintain consistency — character voices, location details, arc beats, and timeline continuity.
-
-**Try:** "Write a chapter" or "Outline the next chapter"
-
-## Example
-
-See [`examples/the-last-ember/`](examples/the-last-ember/) for a complete sample story project showing what the plugin produces — a fantasy story with three characters, two locations, a magic system, a plot arc with foreshadowing tracking, and a first chapter with full prose.
-
-## How It Works
-
-Every story element is a markdown file with YAML frontmatter. Skills cross-reference each other:
-
-- `story.md` is the top-level bible read by all skills
-- Characters, locations, and arcs use kebab-case identifiers (e.g., `sera-voss`)
-- `_index.md` files serve as registries for each domain
-- Relationships and references are maintained bidirectionally
-
-## Other Platforms
+<details>
+<summary><strong>Other platforms</strong></summary>
 
 These skills follow the open [Agent Skills](https://agentskills.io) standard (`SKILL.md` with YAML frontmatter). They work with any compatible agent — just copy the skill folders to your agent's skills directory.
 
@@ -191,6 +167,52 @@ For non-agent use:
 - **Any LLM API** — include skill content in system prompts
 - **Manual use** — the templates, workflows, and story structure are model-agnostic
 
-## License
+</details>
 
-MIT
+## 🛠️ Skills
+
+| Skill | What it does | Try saying |
+|-------|-------------|------------|
+| **story-init** | Scaffolds a complete story project with folder structure, story bible, and registries | *"Start a new story"* |
+| **character-management** | Creates rich character profiles with relationships, traits, arcs, and family trees | *"Create a character"* |
+| **worldbuilding** | Builds locations and world systems — magic, politics, technology, religion, and more | *"Design a magic system"* |
+| **plot-structure** | Plans story arcs using structures like three-act, hero's journey, save the cat, kishotenketsu | *"Create a plot arc"* |
+| **chapter-writing** | Writes chapters using an outline-first workflow, pulling context from all story files for consistency | *"Write the next chapter"* |
+
+## 📁 Project Structure
+
+Running **story-init** creates this layout:
+
+```
+my-story/
+├── story.md                  # Story bible — title, genre, themes, POV, tense
+├── characters/
+│   └── _index.md             # Character registry
+├── worldbuilding/
+│   ├── _index.md             # World overview
+│   ├── locations/
+│   └── systems/
+├── plot/
+│   ├── _index.md             # Arc overview
+│   ├── arcs/
+│   └── timeline.md
+└── chapters/
+    └── _index.md             # Chapter registry
+```
+
+## ⚙️ How It Works
+
+Every story element is a markdown file with YAML frontmatter. Skills cross-reference each other to keep your story consistent:
+
+- **`story.md`** is the top-level bible read by all skills
+- Characters, locations, and arcs use **kebab-case identifiers** (e.g., `sera-voss`)
+- **`_index.md`** files serve as registries for each domain
+- Relationships and references are maintained **bidirectionally**
+
+## 📖 Example
+
+> Explore [`examples/the-last-ember/`](examples/the-last-ember/) — a complete fantasy story with three characters, two locations, a magic system, a plot arc with foreshadowing tracking, and a first chapter with full prose.
+
+## 📄 License
+
+[MIT](LICENSE)
