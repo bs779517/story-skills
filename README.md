@@ -1,6 +1,8 @@
 # Story Skills
 
-A Claude Code plugin for end-to-end story writing powered by markdown. Manage characters, build worlds, structure plots, and write chapters — all as structured markdown files with YAML frontmatter.
+A suite of [Agent Skills](https://agentskills.io) for end-to-end story writing powered by markdown. Manage characters, build worlds, structure plots, and write chapters — all as structured markdown files with YAML frontmatter.
+
+Works with Claude Code, GitHub Copilot, Cursor, Windsurf, Gemini CLI, OpenAI Codex, OpenCode, and any agent that supports the `SKILL.md` standard.
 
 ## Installation
 
@@ -70,6 +72,53 @@ cp -r story-skills/skills/* .agents/skills/
 
 You can also use the built-in installer or symlink the skills directory. Codex detects new skills automatically.
 
+### GitHub Copilot (VS Code)
+
+[VS Code with Copilot](https://code.visualstudio.com/docs/copilot/customization/agent-skills) discovers skills from multiple directories:
+
+```shell
+# Clone the repo
+git clone https://github.com/danjdewhurst/story-skills.git
+
+# Copy skills to your project (any of these work)
+cp -r story-skills/skills/* .github/skills/
+cp -r story-skills/skills/* .agents/skills/
+
+# Or install globally
+cp -r story-skills/skills/* ~/.copilot/skills/
+```
+
+Skills auto-activate when your request matches a skill's description or can be invoked manually.
+
+### Cursor
+
+[Cursor](https://www.cursor.com) supports the `SKILL.md` standard:
+
+```shell
+# Clone the repo
+git clone https://github.com/danjdewhurst/story-skills.git
+
+# Copy skills to your project
+cp -r story-skills/skills/* .agents/skills/
+```
+
+### Windsurf
+
+[Windsurf](https://windsurf.com) discovers skills from workspace and global directories:
+
+```shell
+# Clone the repo
+git clone https://github.com/danjdewhurst/story-skills.git
+
+# Copy skills to your project
+cp -r story-skills/skills/* .windsurf/skills/
+
+# Or install globally
+cp -r story-skills/skills/* ~/.codeium/windsurf/skills/
+```
+
+Cascade auto-invokes skills when your request matches a skill's description, or use `@skill-name` to invoke manually.
+
 ## Skills
 
 ### story-init
@@ -134,12 +183,13 @@ Every story element is a markdown file with YAML frontmatter. Skills cross-refer
 
 ## Other Platforms
 
-The skills are just markdown files with YAML frontmatter — they work beyond Claude Code and OpenCode:
+These skills follow the open [Agent Skills](https://agentskills.io) standard (`SKILL.md` with YAML frontmatter). They work with any compatible agent — just copy the skill folders to your agent's skills directory.
 
-- **Claude.ai Projects** — add the SKILL.md and reference files as project knowledge
-- **Claude API** — include skill content in system prompts
-- **Any SKILL.md-compatible agent** — the format is becoming a standard; copy the skill folders to your agent's skills directory
-- **Other LLMs** — the templates, workflows, and story structure are model-agnostic; paste the relevant SKILL.md content into your conversation
+For non-agent use:
+
+- **Claude.ai / ChatGPT Projects** — add the SKILL.md and reference files as project knowledge
+- **Any LLM API** — include skill content in system prompts
+- **Manual use** — the templates, workflows, and story structure are model-agnostic
 
 ## License
 
