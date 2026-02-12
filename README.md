@@ -61,6 +61,10 @@ Write chapters using an outline-first workflow. Gathers context from all other s
 
 **Try:** "Write a chapter" or "Outline the next chapter"
 
+## Example
+
+See [`examples/the-last-ember/`](examples/the-last-ember/) for a complete sample story project showing what the plugin produces — a fantasy story with three characters, two locations, a magic system, a plot arc with foreshadowing tracking, and a first chapter with full prose.
+
 ## How It Works
 
 Every story element is a markdown file with YAML frontmatter. Skills cross-reference each other:
