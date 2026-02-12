@@ -4,6 +4,8 @@ A Claude Code plugin for end-to-end story writing powered by markdown. Manage ch
 
 ## Installation
 
+### Claude Code
+
 ```shell
 # Add the marketplace
 /plugin marketplace add danjdewhurst/story-skills
@@ -11,6 +13,23 @@ A Claude Code plugin for end-to-end story writing powered by markdown. Manage ch
 # Install the plugin
 /plugin install story-skills@story-skills
 ```
+
+### OpenCode
+
+The skills use the same `SKILL.md` format that [OpenCode](https://opencode.ai) supports natively. Copy the skill folders into your skills directory:
+
+```shell
+# Clone the repo
+git clone https://github.com/danjdewhurst/story-skills.git
+
+# Copy skills to your project
+cp -r story-skills/skills/* .opencode/skills/
+
+# Or install globally
+cp -r story-skills/skills/* ~/.config/opencode/skills/
+```
+
+OpenCode also searches `.claude/skills/` paths, so project-level Claude skills are automatically discovered.
 
 ## Skills
 
@@ -74,15 +93,14 @@ Every story element is a markdown file with YAML frontmatter. Skills cross-refer
 - `_index.md` files serve as registries for each domain
 - Relationships and references are maintained bidirectionally
 
-## Using Without Claude Code
+## Other Platforms
 
-The plugin system is Claude Code specific, but the skills themselves are just markdown — they work anywhere:
+The skills are just markdown files with YAML frontmatter — they work beyond Claude Code and OpenCode:
 
 - **Claude.ai Projects** — add the SKILL.md and reference files as project knowledge
 - **Claude API** — include skill content in system prompts
-- **Other LLMs** — the templates, workflows, and story structure are model-agnostic
-
-The automatic skill loading ("say 'create a character' and the right skill activates") only works in Claude Code. Everywhere else, you'd paste the relevant SKILL.md content into your conversation manually.
+- **Any SKILL.md-compatible agent** — the format is becoming a standard; copy the skill folders to your agent's skills directory
+- **Other LLMs** — the templates, workflows, and story structure are model-agnostic; paste the relevant SKILL.md content into your conversation
 
 ## License
 
